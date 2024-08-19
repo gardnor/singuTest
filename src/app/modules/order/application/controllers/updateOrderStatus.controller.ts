@@ -9,13 +9,7 @@ import {
 import { UpdateOrderStatusService } from '../services/updateOrderStatus.service';
 import { UpdateOrderStatusDto } from '../dto/updateOrderStatus.dto';
 import { OrderStatusEnum } from '../../domain/enums/orderStatus.enum';
-import { IOrder } from '../../domain/interfaces/order.interface';
-
-const orderReturnEx: IOrder = {
-  _id: '66c17c2c5e3f6d01a6ef49a0',
-  items: ['pizza', 'coca lata'],
-  status: OrderStatusEnum.Ready,
-};
+import { swaggerExamples } from '../../infrastructure/common/swagger.constants';
 
 @ApiTags('Order')
 @Controller('orders')
@@ -27,7 +21,7 @@ export class UpdateOrderStatusController {
   @ApiResponse({
     status: 200,
     description: 'The order status has been successfully updated.',
-    example: orderReturnEx,
+    example: swaggerExamples.returnOrderExample,
   })
   @ApiResponse({
     status: 400,

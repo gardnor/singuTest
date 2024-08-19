@@ -1,7 +1,8 @@
 import { Controller, Get, Query } from '@nestjs/common';
-import { ApiOperation, ApiQuery, ApiTags } from '@nestjs/swagger';
+import { ApiOperation, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { FindAllOrderService } from '../services/findAllOrder.service';
 import { OrderStatusEnum } from '../../domain/enums/orderStatus.enum';
+import { swaggerExamples } from '../../infrastructure/common/swagger.constants';
 
 @ApiTags('Order')
 @Controller('orders')
@@ -10,6 +11,15 @@ export class FindAllOrderController {
 
   @Get()
   @ApiOperation({ summary: 'Find all orders' })
+  @ApiResponse({
+    status: 200,
+    description: 'The order status has been successfully updated.',
+    example: [swaggerExamples.returnOrderExample],
+  })
+  @ApiResponse({
+    status: 404,
+    description: 'Not found',
+  })
   @ApiQuery({
     name: 'page',
     type: Number,
