@@ -24,14 +24,14 @@ Before running the application, ensure you have the following installed:
 
 1. Clone the repository:
 
-	```bash
-   git clone git@github.com:gardnor/singuTest.git
-   cd <repository-directory>
+```bash
+    git clone git@github.com:gardnor/singuTest.git
+    cd <repository-directory>
 ```
 2. Install the dependencies:
 
-	```bash
-npm install
+```bash
+    npm install
 ```
 3. Set up environment variables:
 
@@ -39,11 +39,11 @@ npm install
  - Update the MONGO_URI variable in the .env file with your MongoDB connection string (you can use mine, it is in .env.example).
 
 
-## development watch mode
+## Development watch mode
 1. Run in terminal
 
-	```bash
-npm run start:dev
+```bash
+    npm run start:dev
 ```
 a. The application will run by default on http://localhost:3000. 
 
@@ -51,10 +51,10 @@ a. The application will run by default on http://localhost:3000.
 ## Unit tests, e2e and coverage
 1. To run all tests, you can run:
 
-	```bash
-npm run test
-npm run test:e2e
-npm run test:cov
+```bash
+    npm run test
+    npm run test:e2e
+    npm run test:cov
 ```
 
 ### Stay in touch
